@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-dark-brown: #212525;
+    --background-dark-grey: #1e2325;
+    --background-everforest: #1c2c2b;
+    --background-light: #b3b18e;
+    --background-dark: #2c3639;
+    --background-gunblue: #3f4e4f;
+    --background-tan: #a27b5c;
+
+    --font-light-grey: #dcd7c9;
+    --font-light: #939698;
+    --font-dark: #171718;
+}
+
+body {
+    background: var(--background-dark);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+        'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--font-light-grey);
+}
+
+/* ------ Text Styling ------ */
+h1 {
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.light {
+    color: var(--font-light);
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.bold {
+    color: var(--font-dark);
+    font-weight: 600;
+}
+
+/* -------- Buttons --------- */
+.btn {
+    font-size: 1.2rem;
+    font-weight: 300;
+    width: 5.5rem;
+    margin-top: 50px;
+    background-color: transparent;
+    color: var(--font-light-grey);
+    border: none;
+    transition: 200ms ease all;
+}
+
+.btn-active {
+    color: #fff;
+    border-left: 3px solid var(--background-light);
+    transform: scale(1.02);
+}
+/* .container-col button { */
+/*     font-size: 1.2rem; */
+/*     font-weight: 300; */
+/*     padding: 2px; */
+/*     margin-top: 50px; */
+/*     background-color: transparent; */
+/*     color: var(--font-light-grey); */
+/*     border: none; */
+/*     transition: 200ms ease all; */
+/* } */
+/**/
+/* .container-col button:hover { */
+/*     border-left: solid 4px var(--font-light-grey); */
+/*     color: #fff; */
+/* } */
+
+/* --------- Boxes ---------- */
+.container-row {
+    display: flex;
+    padding: 30px;
+}
+
+.container-col {
+    align-items: start;
+    justify-content: baseline;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.container-sm {
+    width: 20vw;
+    padding: 30px;
+}
+.container-md {
+    width: 30vw;
+    padding: 30px;
+}
+.container-lg {
+    width: 50vw;
+    padding: 30px;
+}
+
+/* -------- Margins --------- */
+.margin-top-sm {
+    margin-top: 20px;
+}
+.margin-top-md {
+    margin-top: 40px;
+}
+.margin-top-lg {
+    margin-top: 80px;
+}
+.margin-top-very-lg {
+    margin-top: 480px;
+}
+
+.margin-left-sm {
+    margin-left: 20px;
+}
+.margin-left-md {
+    margin-left: 40px;
+}
+.margin-left-lg {
+    margin-left: 80px;
+}
+.margin-right-sm {
+    margin-right: 20px;
+}
+.margin-right-md {
+    margin-right: 40px;
+}
+.margin-right-lg {
+    margin-right: 80px;
+}
+.margin-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ------- Alignment -------- */
+.center {
+    justify-content: center;
+}
+.left {
+    justify-content: left;
+    align-items: flex-start;
+}
+.right {
+    justify-content: right;
+    align-items: flex-end;
+}
+.space-lg {
+    justify-content: space-between;
+}
+.space-md {
+    justify-content: space-evenly;
+}
+/* ---- Margins  */
+
+/* --------- Misc ----------- */
+.underline-sm {
+    width: 250px;
+    height: 2px;
+    background-color: var(--background-tan);
+}
+.underline-md {
+    width: 350px;
+    height: 2px;
+    background-color: var(--background-tan);
+}
+.underline-lg {
+    width: 550px;
+    height: 2px;
+    background-color: var(--background-tan);
+}
+
+/* --------- Color ---------- */
+.tan {
+    background-color: var(--background-tan);
+}
+.white {
+    background-color: var(--background-light);
+}
+
+/* --------- Resize --------- */
+.resize-sm {
+    width: 20vw;
+}
+.resize-md {
+    width: 40vw;
+}
+.resize-lg {
+    width: 70vw;
+}

@@ -16,6 +16,8 @@
     --font-light-grey: #dcd7c9;
     --font-light: #939698;
     --font-dark: #171718;
+
+    --transition: 1.5s all ease;
 }
 
 body {
@@ -23,6 +25,27 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
         'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--font-light-grey);
+}
+
+article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+article.activeSlide {
+    opacity: 1;
+    transform: translateX(0);
+}
+article.lastSlide {
+    transform: translateX(-100%);
+}
+article.nextSlide {
+    transform: translateX(100%);
 }
 
 /* ------ Text Styling ------ */
@@ -62,6 +85,29 @@ h3 {
     color: var(--font-light-grey);
     border: none;
     transition: 200ms ease all;
+}
+
+.next,
+.prev {
+    position: absolute;
+    top: 150px;
+    background: transparent;
+    transform: translateY(-50%);
+    color: var(--font-light-grey);
+    border: none;
+    place-items: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: grid;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s all linear;
+}
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
 }
 
 .btn-active {
@@ -166,6 +212,24 @@ h3 {
 .space-md {
     justify-content: space-evenly;
 }
+.text-center {
+    text-align: center;
+}
+.align-center {
+    align-items: center;
+}
+.section-center {
+    margin: 0 auto;
+    margin-top: 4rem;
+    width: 80vw;
+    height: 450px;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
 /* ---- Margins  */
 
 /* --------- Misc ----------- */
@@ -191,6 +255,32 @@ h3 {
 }
 .white {
     background-color: var(--background-light);
+}
+
+/* --------- Photo ---------- */
+.profile-sm {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid 3px var(--font-light-grey);
+    box-shadow: 2px 2px 15px var(--background-dark-grey);
+}
+.profile-md {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid 3px var(--font-light-grey);
+    box-shadow: 1px 8px 20px black;
+}
+.profile-lg {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid 3px var(--font-light-grey);
+    box-shadow: 2px 2px 15px var(--background-dark-grey);
 }
 
 /* --------- Resize --------- */

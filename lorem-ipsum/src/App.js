@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './index.css';
+import data from './data';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -7,6 +8,12 @@ function App() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        let amount = parseInt(count);
+
+        if (count <= 0) amount = 1;
+        if (count > 8) amount = 8;
+
+        setText(data.slice(0, amount));
     };
 
     return (
@@ -32,7 +39,15 @@ function App() {
                     </button>
                 </form>
             </div>
-            <article></article>
+            <article>
+                {text.map((item, index) => {
+                    return (
+                        <div className='container-md'>
+                            <p key={index}>{item}</p>
+                        </div>
+                    );
+                })}
+            </article>
         </section>
     );
 }

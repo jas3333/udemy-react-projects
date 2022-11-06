@@ -147,15 +147,15 @@ input:focus {
 
 .container-sm {
     width: 20vw;
-    padding: 30px;
+    padding: 10px;
 }
 .container-md {
-    width: 30vw;
-    padding: 30px;
+    width: 50vw;
+    padding: 10px;
 }
 .container-lg {
-    width: 50vw;
-    padding: 30px;
+    width: 80vw;
+    padding: 10px;
 }
 /* --------- Shadow --------- */
 

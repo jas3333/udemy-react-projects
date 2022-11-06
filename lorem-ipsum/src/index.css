@@ -75,6 +75,10 @@ input {
 input:focus {
     outline: none;
 }
+
+.input-sm {
+    padding: 5px 5px;
+}
 /* -------- Buttons --------- */
 .btn {
     font-size: 1.2rem;
@@ -93,7 +97,7 @@ input:focus {
     transform: scale(1.02);
 }
 
-.log-in {
+.btn-line {
     color: var(--font-light-grey);
     width: 100%;
     padding: 10px;
@@ -102,11 +106,11 @@ input:focus {
     border-radius: 5px;
     margin-bottom: 10px;
 }
-.log-in:hover {
+.btn-line:hover {
     background-color: var(--font-light-grey);
     color: var(--background-dark);
 }
-.log-in:active {
+.btn-line:active {
     transform: scale(0.98);
 }
 
@@ -204,13 +208,14 @@ input:focus {
     margin-bottom: 80px;
 }
 
-.margin-auto {
+.auto {
     margin-left: auto;
     margin-right: auto;
 }
 /* ------- Alignment -------- */
 .center {
     justify-content: center;
+    text-align: center;
 }
 .align-center {
     align-items: center;

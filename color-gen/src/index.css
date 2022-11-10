@@ -351,3 +351,19 @@ input:focus {
 .hidden {
     display: none;
 }
+
+/* -------- Mobile --------- */
+
+@media only screen and (max-width: 600px) {
+    .container-row {
+        margin: 0 auto;
+        width: 370px;
+        box-shadow: none;
+    }
+
+    .container-square {
+        width: 270px;
+        height: 270px;
+        margin-right: 55px;
+    }
+}

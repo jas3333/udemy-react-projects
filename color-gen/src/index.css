@@ -275,6 +275,10 @@ input:focus {
     background-color: var(--background-white);
 }
 
+.fc-dark {
+    color: var(--font-dark);
+}
+
 .fc-light {
     color: var(--font-light-grey);
 }
@@ -356,14 +360,27 @@ input:focus {
 
 @media only screen and (max-width: 600px) {
     .container-row {
-        margin: 0 auto;
         width: 370px;
         box-shadow: none;
     }
+    .container-col {
+        align-items: center;
+    }
 
     .container-square {
-        width: 270px;
-        height: 270px;
-        margin-right: 55px;
+        width: 350px;
+        height: 80px;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .margin-II {
+        margin: 0;
+    }
+    .margin-left-sm {
+        margin-left: 0;
+    }
+    .margin-right-sm {
+        margin: 0;
     }
 }

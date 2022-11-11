@@ -69,7 +69,7 @@ label {
 /* --------- Input ---------- */
 input {
     padding: 10px 5px;
-    height: 40px;
+    height: 30px;
     border: none;
     border-radius: 5px;
 }
@@ -100,8 +100,7 @@ input:focus {
 
 .btn-line {
     color: var(--font-light-grey);
-    width: 100%;
-    padding: 8px;
+    height: 30px;
     background-color: transparent;
     border: solid 1px var(--font-light-grey);
     border-radius: 5px;
@@ -136,7 +135,6 @@ input:focus {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 20px;
 }
 
 .container-col {
@@ -266,13 +264,33 @@ input:focus {
 .pad-right-left-sm {
     padding: 0 5px;
 }
+.pad-sm {
+    padding: 5px;
+}
+.pad-md {
+    padding: 10px;
+}
+.pad-lg {
+    padding: 15px;
+}
 
-/* --------- Color ---------- */
+/* --------- Colors --------- */
 .tan {
     background-color: var(--background-tan);
 }
 .white {
     background-color: var(--background-white);
+}
+
+.bg-blue-grey {
+    background-color: #243337;
+}
+
+.fc-green {
+    color: #339233;
+}
+.fc-red {
+    color: #b00000;
 }
 
 .fc-dark {
@@ -286,7 +304,7 @@ input:focus {
 /* --------- Resize --------- */
 
 .resize-x-sm {
-    width: 10vw;
+    width: 5vw;
 }
 .resize-sm {
     width: 20vw;
@@ -332,19 +350,16 @@ input:focus {
 }
 /* --------- Misc ----------- */
 .underline-sm {
-    width: 250px;
+    width: 10vw;
     height: 1px;
-    background-color: var(--background-tan);
 }
 .underline-md {
-    width: 350px;
+    width: 20vw;
     height: 1px;
-    background-color: var(--background-tan);
 }
 .underline-lg {
-    width: 550px;
+    width: 30vw;
     height: 1px;
-    background-color: var(--background-tan);
 }
 .hex-background {
     border: solid 2px var(--font-light-grey);

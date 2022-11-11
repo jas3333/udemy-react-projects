@@ -4,15 +4,15 @@ const Form = () => {
     const [item, setItem] = useState('');
     const [list, setList] = useState([]);
 
-    const removeItem = (selected) => {
-        setList(list.filter((item) => selected === item));
-        console.log(selected);
+    const removeItem = (id) => {
+        setList(list.filter((item) => item.id !== id));
     };
 
     const submitHandler = (event) => {
         event.preventDefault();
-        setList([...list, { item: item, id: Math.floor(Math.random() * 1000) }]);
-        console.log(list);
+        const newItem = { id: Math.floor(Math.random() * 10000), item: item };
+        setList([...list, newItem]);
+
         setItem('');
     };
 
@@ -32,9 +32,10 @@ const Form = () => {
                 </button>
             </form>
             {list.map((items, index) => {
+                console.log(items.item);
                 return (
                     <div className='container-row margin-top-sm' key={index}>
-                        <Item {...items} removeItem={removeItem} />
+                        <Item thing={items.item} id={items.id} removeItem={removeItem} />
                     </div>
                 );
             })}

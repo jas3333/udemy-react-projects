@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --background-dark-brown: #212525;
+    --background-dark-grey: #1e2325;
+    --background-everforest: #1c2c2b;
+    --background-light: #b3b18e;
+    --background-dark: #2c3639;
+    --background-gunblue: #3f4e4f;
+    --background-tan: #a27b5c;
+    --background-white: #fff;
+    --background-light-grey: #bfbccb;
+    --color-darker-grey: #9695ab;
+
+    --font-light-grey: #dcd7c9;
+    --font-light: #939698;
+    --font-dark: #171718;
+}
+
+body {
+    background: var(--background-dark);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+        'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--font-light-grey);
+}
+
+/* ------ Text Styling ------ */
+h1 {
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+.light {
+    color: var(--font-light);
+    font-weight: 400;
+    font-size: 1.1rem;
+    background-color: rgb(red, green, blue);
+}
+
+.bold {
+    color: var(--font-dark);
+    font-weight: 600;
+}
+
+/* --------- Input ---------- */
+input {
+    padding: 10px 5px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+input:focus {
+    outline: none;
+}
+
+.input-sm {
+    padding: 5px 5px;
+}
+/* -------- Buttons --------- */
+.btn {
+    font-size: 1.2rem;
+    font-weight: 300;
+    width: 5.5rem;
+    margin-top: 50px;
+    background-color: transparent;
+    color: var(--font-light-grey);
+    border: none;
+    transition: 200ms ease all;
+}
+
+.btn-active {
+    color: #fff;
+    border-left: 3px solid var(--background-light);
+    transform: scale(1.02);
+}
+
+.btn-line {
+    color: var(--font-light-grey);
+    width: 100%;
+    padding: 8px;
+    background-color: transparent;
+    border: solid 1px var(--font-light-grey);
+    border-radius: 5px;
+}
+.btn-line:hover {
+    background-color: var(--font-light-grey);
+    color: var(--background-dark);
+}
+.btn-line:active {
+    transform: scale(0.98);
+}
+
+.login {
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    cursor: default;
+    user-select: none;
+}
+.login:hover {
+    background-color: var(--font-light-grey);
+    color: var(--background-dark);
+}
+.login:active {
+    transform: scale(0.98);
+}
+
+/* --------- Boxes ---------- */
+.container-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.container-col {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.container-square {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    transition: 300ms ease all;
+}
+
+.container-square:hover {
+    transform: scale(1.03);
+}
+
+.container-sm {
+    width: 20vw;
+    padding: 10px;
+}
+.container-md {
+    width: 50vw;
+    padding: 10px;
+}
+.container-lg {
+    width: 80vw;
+    padding: 10px;
+}
+/* --------- Shadow --------- */
+
+.shadow-dark-sm {
+    box-shadow: 1px 1px 10px black;
+}
+
+/* -------- Margins --------- */
+.margin-top-sm {
+    margin-top: 20px;
+}
+.margin-top-md {
+    margin-top: 40px;
+}
+.margin-top-lg {
+    margin-top: 80px;
+}
+.margin-top-very-lg {
+    margin-top: 480px;
+}
+
+.margin-left-vsm {
+    margin-left: 10px;
+}
+.margin-left-sm {
+    margin-left: 20px;
+}
+.margin-left-md {
+    margin-left: 40px;
+}
+.margin-left-lg {
+    margin-left: 80px;
+}
+.margin-right-sm {
+    margin-right: 20px;
+}
+.margin-right-md {
+    margin-right: 40px;
+}
+.margin-right-lg {
+    margin-right: 80px;
+}
+.margin-bottom-sm {
+    margin-bottom: 20px;
+}
+.margin-bottom-md {
+    margin-bottom: 40px;
+}
+.margin-bottom-lg {
+    margin-bottom: 80px;
+}
+
+.margin-I {
+    margin: 5px;
+}
+.margin-II {
+    margin: 10px;
+}
+.margin-III {
+    margin: 15px;
+}
+
+.auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ------- Alignment -------- */
+.center {
+    justify-content: center;
+    text-align: center;
+}
+.align-center {
+    align-items: center;
+}
+
+.left {
+    justify-content: left;
+    align-items: flex-start;
+}
+.right {
+    justify-content: right;
+    align-items: flex-end;
+}
+.space-lg {
+    justify-content: space-between;
+}
+.space-md {
+    justify-content: space-evenly;
+}
+
+/* -------- Padding --------- */
+.pad-none {
+    padding: 0;
+}
+
+.pad-right-left-sm {
+    padding: 0 5px;
+}
+
+/* --------- Color ---------- */
+.tan {
+    background-color: var(--background-tan);
+}
+.white {
+    background-color: var(--background-white);
+}
+
+.fc-dark {
+    color: var(--font-dark);
+}
+
+.fc-light {
+    color: var(--font-light-grey);
+}
+
+/* --------- Resize --------- */
+
+.resize-x-sm {
+    width: 10vw;
+}
+.resize-sm {
+    width: 20vw;
+}
+.resize-md {
+    width: 40vw;
+}
+.resize-lg {
+    width: 70vw;
+}
+.resize-fill {
+    width: 100%;
+}
+
+.width-sm {
+    width: 60px;
+}
+
+.font-very-sm {
+    font-size: 0.75rem;
+}
+
+/* --------- Border --------- */
+.border-error {
+    border: solid 1px red;
+}
+.border-none {
+    border: none;
+}
+
+.border-sm {
+    border: solid 1px var(--font-light-grey);
+}
+
+.border-rnd-I {
+    border-radius: 5px;
+}
+.border-rnd-II {
+    border-radius: 10px;
+}
+.border-rnd-III {
+    border-radius: 15px;
+}
+/* --------- Misc ----------- */
+.underline-sm {
+    width: 250px;
+    height: 1px;
+    background-color: var(--background-tan);
+}
+.underline-md {
+    width: 350px;
+    height: 1px;
+    background-color: var(--background-tan);
+}
+.underline-lg {
+    width: 550px;
+    height: 1px;
+    background-color: var(--background-tan);
+}
+.hex-background {
+    border: solid 2px var(--font-light-grey);
+    text-align: center;
+    border-radius: 5px;
+    width: 150px;
+}
+.hidden {
+    display: none;
+}
+
+/* -------- Mobile --------- */
+
+@media only screen and (max-width: 600px) {
+    .container-row {
+        width: 370px;
+        box-shadow: none;
+    }
+    .container-col {
+        align-items: center;
+    }
+
+    .container-square {
+        width: 350px;
+        height: 80px;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .margin-II {
+        margin: 0;
+    }
+    .margin-left-sm {
+        margin-left: 0;
+    }
+    .margin-right-sm {
+        margin: 0;
+    }
+}

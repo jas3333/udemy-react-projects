@@ -1,7 +1,17 @@
-import './index.css';
+import Hero from './Hero';
+import Navbar from './Navbar';
+import Sidebar from './Sidebar';
+import Submenu from './Submenu';
 
 function App() {
-    return <div className='App'></div>;
+    return (
+        <>
+            <Navbar />
+            <Hero />
+            <Sidebar />
+            <Submenu />
+        </>
+    );
 }
 
 export default App;

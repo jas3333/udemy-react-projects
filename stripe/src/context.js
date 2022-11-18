@@ -1,9 +1,37 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-    return <AppContext.Provider value=''>{children}</AppContext.Provider>;
+    const [sidebar, setSidebar] = useState(true);
+    const [submenu, setSubmenu] = useState(true);
+
+    const openSidebar = () => {
+        setSidebar(true);
+    };
+    const closeSidebar = () => {
+        setSidebar(false);
+    };
+
+    const openSubmenu = () => {
+        setSubmenu(true);
+    };
+    const closeSubmenu = () => {
+        setSubmenu(false);
+    };
+
+    const contextValues = {
+        // --State
+        sidebar,
+        submenu,
+        // --Functions
+        openSidebar,
+        closeSidebar,
+        openSubmenu,
+        closeSubmenu,
+    };
+
+    return <AppContext.Provider value={contextValues}>{children}</AppContext.Provider>;
 };
 
 export const useGlobalContext = () => {

@@ -1,9 +1,8 @@
+import { useGlobalContext } from './context';
+
 const Submenu = () => {
-    return (
-        <div>
-            <h1>Submenu</h1>
-        </div>
-    );
+    const { submenu } = useGlobalContext();
+    return <aside className={`${submenu ? 'submenu show' : 'submenu'}`}>Submenu</aside>;
 };
 
 export default Submenu;
